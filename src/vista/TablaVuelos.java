@@ -3,7 +3,7 @@ package vista;
 import java.util.Collection;
 import app.AppUtils;
 import controlador.ListaVuelos;
-import controlador.Vuelo;
+import modelo.Vuelo;
 
 public class TablaVuelos implements Vista {
 	

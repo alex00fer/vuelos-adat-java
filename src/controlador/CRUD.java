@@ -1,5 +1,7 @@
 package controlador;
 
+import modelo.Vuelo;
+
 public interface CRUD {
 	
 	ListaVuelos getVuelos() throws Exception;
@@ -7,5 +9,7 @@ public interface CRUD {
 	void actualizarVuelo(String codigo, Vuelo vuelo) throws Exception;
 	void insertarVuelo (Vuelo vuelo) throws Exception;
 	void borrarVuelo (String codigo) throws Exception;
+	
+	void dispose();
 
 }

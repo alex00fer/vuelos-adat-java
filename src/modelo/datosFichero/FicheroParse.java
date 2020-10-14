@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.Collection;
 import controlador.ListaVuelos;
-import controlador.Vuelo;
+import modelo.Vuelo;
 
 public class FicheroParse {
 

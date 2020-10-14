@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map.Entry;
 
+import modelo.Vuelo;
+
 public class ListaVuelos implements Cloneable {
 	HashMap<String, Vuelo> vuelos;
 

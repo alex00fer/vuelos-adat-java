@@ -6,7 +6,7 @@ import controlador.ConfigFile;
 public class MySQLConnection {
 	
 	private final ConfigFile conf;
-	private final String CONF_FILE_NAME = "conf_mysql.ini"; 
+	private final String CONF_FILE_NAME = "config/conf_mysql.ini"; 
 	
 	private String DBDIR = "";
 	private String DBNAME = "";

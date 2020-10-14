@@ -3,12 +3,12 @@ package modelo.datosFichero;
 import controlador.CRUD;
 import controlador.ConfigFile;
 import controlador.ListaVuelos;
-import controlador.Vuelo;
+import modelo.Vuelo;
 
 public class FicheroCrud implements CRUD {
 	
 	private ConfigFile conf;
-	private final String CONF_FILE_NAME = "conf_fichero.ini"; 
+	private final String CONF_FILE_NAME = "config/conf_fichero.ini"; 
 	private FicheroParse fichero;
 	
 	private ListaVuelos vuelosCache;
@@ -53,6 +53,11 @@ public class FicheroCrud implements CRUD {
 	{
 		vuelosCache.remove(codigo);
 		setVuelos(vuelosCache);
+	}
+
+	@Override
+	public void dispose() {
+		// Nothing to do.	
 	}
 
 }

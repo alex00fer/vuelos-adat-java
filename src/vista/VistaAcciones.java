@@ -3,7 +3,7 @@ package vista;
 import app.InputController;
 import controlador.CRUD;
 import controlador.ListaVuelos;
-import controlador.Vuelo;
+import modelo.Vuelo;
 
 public class VistaAcciones implements Vista {
 	

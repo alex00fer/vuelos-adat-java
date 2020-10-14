@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.Collection;
 import controlador.CRUD;
 import controlador.ListaVuelos;
-import controlador.Vuelo;
+import modelo.Vuelo;
 
 public class MySQLCrud implements CRUD {
 
@@ -131,6 +131,11 @@ public class MySQLCrud implements CRUD {
 			PreparedStatement pstmt = conn.prepareStatement(query);
 			pstmt.execute();
 		}
+	}
+
+	@Override
+	public void dispose() {
+		// Nothing to do here
 	}
 
 }
