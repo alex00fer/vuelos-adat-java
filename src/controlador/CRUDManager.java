@@ -2,12 +2,14 @@ package controlador;
 
 import modelo.datosFichero.FicheroCrud;
 import modelo.datosMySQL.MySQLCrud;
+import modelo.hibernate.HibernateCrud;
 
 public class CRUDManager {
 
 	public enum MedioCRUD {
 		Fichero, 
 		MySQL,
+		Hibernate,
 	}
 
 	public CRUD getCrud(MedioCRUD medio) throws Exception {
@@ -16,6 +18,8 @@ public class CRUDManager {
 			return new FicheroCrud();
 		case MySQL:
 			return new MySQLCrud();
+		case Hibernate:
+			return new HibernateCrud();
 		default:
 			throw new Exception("Medio no implementado");
 		}

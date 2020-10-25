@@ -27,6 +27,14 @@ public class ListaVuelos implements Cloneable {
 			vuelos.put(cod, v);
 	}
 	
+	public Vuelo get(String codigo) 
+	{
+		if (vuelos.containsKey(codigo))
+			return vuelos.get(codigo);
+		else
+			return null;
+	}
+	
 	public void remove(String codigo) throws Exception 
 	{
 		if (vuelos.containsKey(codigo))

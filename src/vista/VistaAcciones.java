@@ -72,7 +72,7 @@ public class VistaAcciones implements Vista {
 		} catch (Exception ex) 
 		{
 			//ex.printStackTrace(); // debug
-			System.err.println("Error: " + ex.getMessage());
+			System.err.println("Error: " + ex.getCause() + ex.getMessage());
 			InputController.waitFor(2000);
 		}
 	}
@@ -81,18 +81,30 @@ public class VistaAcciones implements Vista {
 	private void editarVuelo() 
 	{
 		try {
+			ListaVuelos listaVuelos = crud.getVuelos(); // obtiene una lista limpia
+			
 			System.out.println();
 			System.out.println("Introduce el código de vuelo que quieres modificar");
 			String codigo = InputController.readString(">Código del vuelo a editar", 5, 5);
+			
+			// comprobar que el codigo sea valido
+			Vuelo vueloSeleccionado = listaVuelos.get(codigo);
+			if (vueloSeleccionado == null) {
+				throw new Exception("El código introducido no coincide con ningún vuelo");
+			}
+			
 			System.out.println("A continuación introduce todos los nuevos valores");
-			Vuelo vuelo = pedirVuelo();
+			Vuelo nuevosDatos = pedirVuelo();
+			
+			vueloSeleccionado.copyFrom(nuevosDatos); // mantener objeto original con los nuevos datos
 		
-			crud.actualizarVuelo(codigo, vuelo);
+			crud.actualizarVuelo(codigo, vueloSeleccionado);
 			
 			System.out.println("Vuelo actualizado");
 			
 		} catch (Exception e) {
 			System.err.println("Operacion modificar cancelada. " + e.getMessage());
+			InputController.waitFor(2000);
 		}
 	}
 	
@@ -109,6 +121,7 @@ public class VistaAcciones implements Vista {
 			
 		} catch (Exception e) {
 			System.err.println("Operacion insertar cancelada. " + e.getMessage());
+			InputController.waitFor(2000);
 		}
 	}
 	
@@ -116,12 +129,12 @@ public class VistaAcciones implements Vista {
 	{
 		return new Vuelo(
 				InputController.readString(">Código", 5, 5), 
-				InputController.readString(">Origen"), 
-				InputController.readString(">Destino"), 
+				InputController.readString(">Origen", 1, 50), 
+				InputController.readString(">Destino", 1, 50), 
 				InputController.readLong(">Fecha (seconds since the Epoch) ", 0, Long.MAX_VALUE) + "", 
-				InputController.readString(">Hora (00:00)"), 
-				InputController.readInteger(">Plazas", 0, 999) + "", 
-				InputController.readInteger(">Plazas libres", 0, 999) + ""
+				InputController.readString(">Hora (00:00)", 5, 5), 
+				InputController.readInteger(">Plazas", 0, 9999) + "", 
+				InputController.readInteger(">Plazas libres", 0, 9999) + ""
 				);
 	}
 	
@@ -138,6 +151,7 @@ public class VistaAcciones implements Vista {
 			
 		} catch (Exception e) {
 			System.err.println("Operacion de borrado cancelada. " + e.getMessage());
+			InputController.waitFor(2000);
 		}
 	}
 }

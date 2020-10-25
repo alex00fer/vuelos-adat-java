@@ -10,6 +10,8 @@ public class Vuelo {
 	private String hora;
 	private int plazas, plazasLibres;
 	
+	public Vuelo() {} // default constructor (for hibernate)
+	
 	public Vuelo(String codigo, String salida, String destino, Date fecha, String hora, int plazas, int plazasLibres) {
 		this.codigo = codigo;
 		this.salida = salida;
@@ -55,6 +57,16 @@ public class Vuelo {
 	public static Vuelo vueloEjemplo() 
 	{
 		return new Vuelo("IB653", "Madrid", "Paris", new Date(), "06:00", 200, 150);
+	}
+	
+	public void copyFrom(Vuelo origen) {
+		this.codigo = origen.codigo;
+		this.salida = origen.salida;
+		this.destino = origen.destino;
+		this.fecha = origen.fecha;
+		this.hora = origen.hora;
+		this.plazas = origen.plazas;
+		this.plazasLibres = origen.plazasLibres;
 	}
 
 	public String getCodigo() {

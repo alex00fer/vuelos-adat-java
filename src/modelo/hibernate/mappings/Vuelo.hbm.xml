@@ -4,14 +4,34 @@
 
 <hibernate-mapping>
 
-	<class name="modelo.Vuelo" table="Vuelos">
-		<id name="empId" type="int">
-			<column name="id" />
-			<generator class="increment" />
+	<class name="modelo.Vuelo" table="vuelos">
+	
+		<id name="codigo" type="string">
+			<column name="codigo" />
 		</id>
 
-		<property name="empName" type="string">
-			<column name="nombre" length="30" not-null="true" />
+		<property name="salida" type="string">
+			<column name="origen" length="50" not-null="true" />
+		</property>
+		
+		<property name="destino" type="string">
+			<column name="destino" length="50" not-null="true" />
+		</property>
+		
+		<property name="fecha" type="date">
+			<column name="fecha" not-null="true" />
+		</property>
+		
+		<property name="hora" type="string">
+			<column name="hora" length="5" not-null="true" />
+		</property>
+		
+		<property name="plazas" type="int">
+			<column name="plazas" not-null="true" />
+		</property>
+		
+		<property name="plazasLibres" type="int">
+			<column name="plazasLibres" not-null="true" />
 		</property>
 		
 	</class>
