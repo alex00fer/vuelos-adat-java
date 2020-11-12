@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "5fabcffbea668a2cf03c4539"
+  },
+  "id": 1,
+  "codigo": "IB706",
+  "origen": "MADRID",
+  "destino": "BARCELONA",
+  "fecha": 45674567,
+  "hora": "18:50",
+  "plazas_totales": 200,
+  "plazas_disponibles": 175
+},{
+  "_id": {
+    "$oid": "5fabcffbea668a2cf03c453a"
+  },
+  "id": 2,
+  "codigo": "IB707",
+  "origen": "MADRID",
+  "destino": "MURCIA",
+  "fecha": 56745674,
+  "hora": "19:00",
+  "plazas_totales": 200,
+  "plazas_disponibles": 175
+},{
+  "_id": {
+    "$oid": "5fabcffbea668a2cf03c453b"
+  },
+  "id": 3,
+  "codigo": "IB708",
+  "origen": "MADRID",
+  "destino": "BILBAO",
+  "fecha": 45674567,
+  "hora": "18:50",
+  "plazas_totales": 200,
+  "plazas_disponibles": 200
+}]

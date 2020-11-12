@@ -104,6 +104,7 @@ public class VistaAcciones implements Vista {
 			
 		} catch (Exception e) {
 			System.err.println("Operacion modificar cancelada. " + e.getMessage());
+			e.printStackTrace();
 			InputController.waitFor(2000);
 		}
 	}
