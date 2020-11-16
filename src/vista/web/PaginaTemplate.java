@@ -41,7 +41,7 @@ public class PaginaTemplate extends EHttpPage {
 		doc.add(content);
 		
 		// header
-		content.add(new EHtmlParagraph("<b>Version en desarrollo.</b> Algunas caracteristicas no estan disponibles todavia en la interfaz web."));
+		content.add(new EHtmlParagraph("<b>Version 1.0</b>"));
 		EHtmlContainer header = new EHtmlContainer();
 		header.addStyle("text-align", "center"); // center
 		header.add(new EHtmlImage("static/header.png")); // image

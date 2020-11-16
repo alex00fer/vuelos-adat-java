@@ -14,7 +14,7 @@ public class VistaPrincipal implements Vista {
 		header = new VistaHeader();
 		vistaCargar = new VistaCargarMedio();
 		vistaIntercambiar = new VistaIntercambioDatos();
-		menuPrincipal = new Menu("Cargar desde...", "Intercambio de datos", "Interfaz web *EN DESARROLLO*", "Salir de la aplicación");
+		menuPrincipal = new Menu("Cargar desde...", "Intercambio de datos", "Interfaz web", "Salir de la aplicación");
 	}
 	
 	@Override
