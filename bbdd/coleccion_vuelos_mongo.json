@@ -1,0 +1,67 @@
+[{
+  "_id": {
+    "$oid": "5fb272683d6e935abd25079a"
+  },
+  "codigo": "RW120",
+  "origen": "Londres",
+  "destino": "Berlin",
+  "fecha": 1271289600000,
+  "hora": "00:00",
+  "plazas_totales": 400,
+  "plazas_disponibles": 360
+},{
+  "_id": {
+    "$oid": "5fb272683d6e935abd25079b"
+  },
+  "codigo": "RA001",
+  "origen": "Berlin",
+  "destino": "Oslo",
+  "fecha": 916185600000,
+  "hora": "18:00",
+  "plazas_totales": 200,
+  "plazas_disponibles": 0
+},{
+  "_id": {
+    "$oid": "5fb272683d6e935abd25079c"
+  },
+  "codigo": "RR390",
+  "origen": "New York",
+  "destino": "California",
+  "fecha": 1606348800000,
+  "hora": "12:00",
+  "plazas_totales": 172,
+  "plazas_disponibles": 130
+},{
+  "_id": {
+    "$oid": "5fb272683d6e935abd25079d"
+  },
+  "codigo": "AC765",
+  "origen": "Buenos Aires",
+  "destino": "Londres",
+  "fecha": 1599609600000,
+  "hora": "15:00",
+  "plazas_totales": 185,
+  "plazas_disponibles": 4
+},{
+  "_id": {
+    "$oid": "5fb272683d6e935abd25079e"
+  },
+  "codigo": "OP700",
+  "origen": "Roma",
+  "destino": "Paris",
+  "fecha": 1620691200000,
+  "hora": "90:00",
+  "plazas_totales": 40,
+  "plazas_disponibles": 10
+},{
+  "_id": {
+    "$oid": "5fb272683d6e935abd25079f"
+  },
+  "codigo": "IB645",
+  "origen": "Madrid",
+  "destino": "Paris",
+  "fecha": 1578700800000,
+  "hora": "20:06",
+  "plazas_totales": 200,
+  "plazas_disponibles": 200
+}]
