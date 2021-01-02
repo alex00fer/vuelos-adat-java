@@ -3,6 +3,7 @@ package controlador;
 import modelo.datosFichero.FicheroCrud;
 import modelo.datosMySQL.MySQLCrud;
 import modelo.hibernate.HibernateCrud;
+import modelo.httpAPI.HttpApiCrud;
 import modelo.mongo.MongoCrud;
 
 public class CRUDManager {
@@ -11,7 +12,8 @@ public class CRUDManager {
 		Fichero, 
 		MySQL,
 		Hibernate,
-		Mongo
+		Mongo,
+		HTTP
 	}
 
 	public CRUD getCrud(MedioCRUD medio) throws Exception {
@@ -24,6 +26,8 @@ public class CRUDManager {
 			return new HibernateCrud();
 		case Mongo:
 			return new MongoCrud();
+		case HTTP:
+			return new HttpApiCrud();
 		default:
 			throw new Exception("Medio no implementado");
 		}

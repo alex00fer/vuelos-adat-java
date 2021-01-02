@@ -71,7 +71,7 @@ public class VistaAcciones implements Vista {
 			}
 		} catch (Exception ex) 
 		{
-			//ex.printStackTrace(); // debug
+			ex.printStackTrace(); // debug
 			System.err.println("Error: " + ex.getCause() + ex.getMessage());
 			InputController.waitFor(2000);
 		}
